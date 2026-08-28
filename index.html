@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Explain It Like I'm 10</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo" onclick="goHome()">
+            🧠 <span>Explain It Like I'm 10</span>
+        </div>
+
+        <div class="nav-right">
+
+            <span id="progressText">
+                0 learned
+            </span>
+
+            <button
+                class="theme-button"
+                onclick="toggleDarkMode()"
+                id="themeButton"
+            >
+                🌙
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ================= HOME ================= -->
+
+    <main id="homePage">
+
+        <section class="hero">
+
+            <div class="badge">
+                ✦ LEARNING MADE SIMPLE
+            </div>
+
+            <h1>
+                Understand things
+                <span>without the complicated words.</span>
+            </h1>
+
+            <p>
+                Choose something you're curious about and
+                we'll explain it like you're 10.
+            </p>
+
+
+            <div class="search-box">
+
+                <span>🔎</span>
+
+                <input
+                    id="searchInput"
+                    type="text"
+                    placeholder="Search 100 concepts..."
+                    oninput="searchConcepts()"
+                >
+
+            </div>
+
+        </section>
+
+
+        <section class="library">
+
+            <div class="library-header">
+
+                <div>
+                    <small>THE LIBRARY</small>
+
+                    <h2>
+                        What do you want to understand?
+                    </h2>
+                </div>
+
+                <strong id="conceptCount">
+                    100 concepts
+                </strong>
+
+            </div>
+
+
+            <div
+                class="categories"
+                id="categories"
+            ></div>
+
+
+            <div
+                class="cards"
+                id="conceptCards"
+            ></div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= CONCEPT PAGE ================= -->
+
+    <main
+        id="conceptPage"
+        class="hidden"
+    >
+
+        <section class="concept-container">
+
+            <button
+                class="back-button"
+                onclick="goHome()"
+            >
+                ← Back to library
+            </button>
+
+
+            <div
+                id="conceptHeader"
+                class="concept-header"
+            ></div>
+
+
+            <div
+                id="conceptContent"
+                class="concept-content"
+            ></div>
+
+
+            <section class="quiz-section">
+
+                <div class="quiz-title">
+
+                    <small>
+                        🧩 TEST YOURSELF
+                    </small>
+
+                    <h2>
+                        Can you explain it now?
+                    </h2>
+
+                    <p id="quizScore"></p>
+
+                </div>
+
+
+                <div id="quizContainer"></div>
+
+            </section>
+
+
+            <div class="navigation">
+
+                <button
+                    onclick="previousConcept()"
+                >
+                    ← Previous
+                </button>
+
+                <button
+                    onclick="nextConcept()"
+                >
+                    Next →
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <strong>Explain It Like I'm 10</strong>
+        <br>
+        Made for curious minds ✦
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
